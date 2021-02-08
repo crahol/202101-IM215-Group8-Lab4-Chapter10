@@ -20,7 +20,7 @@
 //it will display x and y value if moving mouse to the panel 
 // it will say good bye! if leave box
 // it will say stopped move reporting if user clicks on panel 
-$(function	()	{
+$(function () {
     $(".panel")
         .on("mousemove",function (e) {
             $("#message").html("x="	+ e.pageX +	" y=" +	e.pageY);
