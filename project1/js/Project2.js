@@ -13,4 +13,26 @@ $(document).ready(function () {
             
         }
     });
+
+    
+    form.on('change', function(e) {
+        var prop = e.target;
+        var img = $('#imgManipulated img');
+        switch (prop.id.toLowerCase()) {
+            case 'slideropacity':
+                img.css('opacity', prop.value + '%');
+                $('#numOpacity').html(prop.value);
+                break;
+            case 'slidersaturation':
+                img.css('filter', 'saturate(' + prop.value + '%)');
+                img.css('-webkit-filter', 'saturate(' + prop.value + '%)');
+                $('#numSaturation').html(prop.value);
+                break;
+            case 'sliderbrightness':
+                img.css('filter', 'brightness(' + prop.value + '%)');
+                img.css('-webkit-filter', 'brightness(' + prop.value + '%)');
+                $('#numBrightness').html(prop.value);
+                break;
+        }
+    });
 });
