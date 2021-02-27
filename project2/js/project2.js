@@ -39,11 +39,16 @@ $(document).ready(function () {
 
     $("ul.gallery img").on("mouseleave", deletePreview);
     $("ul.gallery img").on("mousemove", shiftPreview);
-});
+
 
 function deletePreview(e) {
+	 $(this).removeClass("gray");
+     $("#preview").remove();
 }
 
 function shiftPreview(e) {
+	$("#preview")
+            .css("top", (e.pageY - 10) + "px")
+            .css("left", (e.pageX + 30) + "px");	
 }
 });
