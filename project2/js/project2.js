@@ -7,4 +7,19 @@ $(document).ready(function () {
         img.title = images[i].title;
         gallery[0].appendChild(img);
     }
+
+    $(function () {
+        $('ul.gallery img').on('mouseover', function(e) {
+
+        });
+
+        $("ul.gallery img").on("mouseleave", deletePreview);
+        $("ul.gallery img").on("mousemove", shiftPreview);
+    });
+
+    function deletePreview(e) {
+    }
+
+    function shiftPreview(e) {
+    }
 });
